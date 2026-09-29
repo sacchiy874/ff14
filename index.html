@@ -3,44 +3,87 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>インデックス</title>
+<title>FF14 RP資料</title>
+
 <style>
+:root {
+  --bg: #f7f5f0;
+  --paper: #fffdf8;
+  --text: #2e302d;
+  --muted: #6b706a;
+  --line: #d9d5ca;
+  --accent: #536b55;
+  --spring: #f3e8ec;
+  --summer: #e7f0e8;
+  --autumn: #f3eadb;
+  --winter: #e7edf2;
+  --other: #eceae5;
+}
+* { box-sizing: border-box; }
 body {
-  max-width: 760px;
-  margin: 40px auto;
-  padding: 0 18px;
-  font-family: sans-serif;
-  line-height: 1.7;
-  color: #222;
-  background: #fff;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  line-height: 1.75;
 }
-h1 { font-size: 1.5rem; }
-h2 { font-size: 1.15rem; margin-top: 2rem; }
-nav { margin: 1rem 0 2rem; }
-nav a { margin-right: 1rem; }
-.notice {
-  border: 1px solid #aaa;
-  padding: 12px 16px;
-  margin: 20px 0;
+main { width: min(100% - 32px, 980px); margin: 42px auto 72px; }
+header { margin-bottom: 30px; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: 0 0 8px; }
+h2 { margin-top: 42px; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+p { margin: 0.5em 0; }
+.lead, .note { color: var(--muted); }
+.card {
+  display: block; background: var(--paper); border: 1px solid var(--line);
+  border-radius: 12px; padding: 20px; margin: 18px 0; text-decoration: none; color: inherit;
 }
-li { margin-bottom: .7rem; }
-small { color: #666; }
+.card:hover { border-color: var(--accent); }
+.card h2 { margin: 0 0 6px; border: 0; padding: 0; font-size: 1.25rem; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0; }
+.nav a {
+  color: var(--text); background: var(--paper); border: 1px solid var(--line);
+  border-radius: 999px; padding: 7px 12px; text-decoration: none;
+}
+table { width: 100%; border-collapse: collapse; background: var(--paper); }
+th, td { border-bottom: 1px solid var(--line); padding: 11px 10px; text-align: left; vertical-align: top; }
+th { font-size: .9rem; color: var(--muted); }
+.season { font-weight: 700; white-space: nowrap; }
+.spring { background: var(--spring); }
+.summer { background: var(--summer); }
+.autumn { background: var(--autumn); }
+.winter { background: var(--winter); }
+.other { background: var(--other); }
+.back { margin-top: 34px; }
+.back a { color: var(--accent); }
+footer { margin-top: 48px; color: var(--muted); font-size: .85rem; }
+@media (max-width: 650px) {
+  main { width: min(100% - 20px, 980px); margin-top: 24px; }
+  table, thead, tbody, tr, th, td { display: block; }
+  thead { display: none; }
+  tr { border-bottom: 1px solid var(--line); padding: 10px 0; }
+  td { border: 0; padding: 3px 10px; }
+  td::before { content: attr(data-label); color: var(--muted); font-size: .78rem; display: block; }
+}
 </style>
+
 </head>
 <body>
-<h1>サッチーのリポジトリのインデックスファイルです</h1>
+<main>
+<header>
+  <h1>FF14 RP資料</h1>
+  <p class="lead">FINAL FANTASY XIV に存在するアイテムや機能を、ロールプレイで使いやすい文脈に整理する個人用資料です。</p>
+</header>
 
-<div class="notice">
-個人的に作成・使用している資料や画像の保管場所です。<br>
-一般向けの素材配布サイトではありません。<br>
-掲載物は、特に利用許諾を示しているものを除き、自由利用・転載・再配布等を許諾するものではありません。
-</div>
+<a class="card" href="flowers.html">
+  <h2>栽培花・リアル季節対応表</h2>
+  <p>フラワーポットで栽培できる観賞花を、現実世界での一般的な開花時期を参考に春・夏・秋・冬などへ整理しています。</p>
+</a>
 
-<ul>
-  <li><a href="illustrations.html">画像ファイル</a></li>
-  <li><a href="templates.html">書類・雛形ファイル</a></li>
-</ul>
+<p class="note">今後、季節の調度品・料理・衣装・生活演出などの資料を追加するための入口として使用します。</p>
 
-<p><small>必要に応じて内容を追加・変更します。</small></p>
+<footer>
+  <p>※ゲーム内の公式な季節設定を示すものではありません。</p>
+</footer>
+</main>
 </body>
 </html>
